@@ -1,0 +1,14 @@
+/*CSS file for calculator*/
+/*Color palate picked using coolors.co*/
+
+body{
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    background: repeating-linear-gradient(#555358, #A599B5) fixed;
+}
+.calc-frame{
+}
+
+
+.button{
+}
