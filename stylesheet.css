@@ -2,13 +2,52 @@
 /*Color palate picked using coolors.co*/
 
 body{
-/*    display: grid;*/
-/*    grid-template-columns: 1fr 1fr 1fr 1fr;*/
-    background: repeating-linear-gradient(#555358, #A599B5) fixed;
+    background: repeating-linear-gradient(#1B1725, #534B62) fixed;
 }
+
 .calc-frame{
+    height: 90vh;
+    width: 40vw;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ece4ee;
+    border: 3px solid #534B62;
 }
 
-
+.display{
+    height: 25vh;
+    width: 100rem;
+    border: 2px solid #534B62;
+    background-color: #D2C2E1;
+}
+#keys{
+    display: grid;
+    height: auto;
+    width: 35rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 75px 75px 75px 75px;
+    gap: 10px;
+}
+#equals{
+    grid-column: span 2;
+}
 .button{
+    /*background-color: #6F5C81;*/
+    background-color: #D2C2E1;
+    border-radius: 8px;
+}
+.button:hover{
+    background-color: #1B1725;
+    color: #ece4ee;
+}
+.button:active{
+    transform: translateY(3px);
+}
+.operator{
+    background-color: #6F5C81;
+}
+.top-row{
+    background-color: #534B62;
 }

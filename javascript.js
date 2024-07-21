@@ -1,39 +1,35 @@
 //JavaScript for Calculator app
 
-//Apply grid-item class to all buttons via DOM manipulation
+//Grab/store elements for DOM manipulation later
 let body = document.querySelector('body');
-for (let i =0; i<20; i++) {
-    const button = document.querySelector('button');
-    button.className = "grid-item";
-    body.appendChild(button);
-}
+let frame = document.querySelector('.calc-frame');
+let display = document.querySelector('.display');
+let btn =document.querySelector("input[type='button']");
 
-//following section is logic for calculations:
+//Following section is logic for calculations:
 // add
 function add(num1, num2){
     return num1 + num2;
 }
-//subtract
+//Subtract
 function difference (num1, num2){
     return num1 - num2;
 }
-//division
+//Division
 function dividend(num1, num2){
     return num1 / num2;
 }
-//multiplication
+//Multiplication
 function product (num1, num2) {
     return num1 * num2;
 }
-
+//Modulus
 function modulus (num1, num2){
     return num1 % num2;
 }
-
-//reversing sign
+//Reversing sign
 function signReverse(num1){
     return num1 * -1;
 }
 
-
-
+//Event handler to decide what operation will be  completed
