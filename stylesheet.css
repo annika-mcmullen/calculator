@@ -2,52 +2,64 @@
 /*Color palate picked using coolors.co*/
 
 body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background: repeating-linear-gradient(#1B1725, #534B62) fixed;
 }
 
-.calc-frame{
+#calc-frame{
     height: 90vh;
-    width: 40vw;
+    width: 25vw;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: #ece4ee;
     border: 3px solid #534B62;
 }
 
 .display{
-    height: 25vh;
     width: 100rem;
+    margin-bottom: 4vh;
     border: 2px solid #534B62;
     background-color: #D2C2E1;
 }
+
 #keys{
     display: grid;
-    height: auto;
     width: 35rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 75px 75px 75px 75px 75px;
     gap: 10px;
 }
 #equals{
     grid-column: span 2;
 }
-.button{
-    /*background-color: #6F5C81;*/
+
+button{
     background-color: #D2C2E1;
     border-radius: 8px;
+
 }
-.button:hover{
+
+.operator{
+    color: white;
+    background-color: #6F5C81;
+}
+
+.top-row{
+    color: white;
+    background-color: #534B62;
+}
+
+button:hover{
     background-color: #1B1725;
     color: #ece4ee;
 }
-.button:active{
+button:active{
     transform: translateY(3px);
-}
-.operator{
-    background-color: #6F5C81;
-}
-.top-row{
-    background-color: #534B62;
 }
