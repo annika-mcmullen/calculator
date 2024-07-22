@@ -1,6 +1,13 @@
 /*CSS file for calculator*/
 /*Color palate picked using coolors.co*/
+:root{
+    --purple-black: #534B62;
+    --darkest-purple: #6F5C81;
+    --medium-purple: #D2C2E1;
+    --lightest-purple: #ece4ee;
+}
 
+/*Specificity (0,0,0,1)*/
 body{
     margin: 0;
     display: flex;
@@ -10,56 +17,67 @@ body{
     background: repeating-linear-gradient(#1B1725, #534B62) fixed;
 }
 
+/*Specificity (0,1,0,0)*/
 #calc-frame{
     height: 90vh;
     width: 25vw;
+    max-width: 300px;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #ece4ee;
-    border: 3px solid #534B62;
+    background-color: var(--lightest-purple);
+    border: 3px solid var(--purple-black);
 }
 
+/*Specificity (0,0,1,0)*/
 .display{
     width: 100rem;
     margin-bottom: 4vh;
-    border: 2px solid #534B62;
-    background-color: #D2C2E1;
+    border: 2px solid var(--purple-black);
+    background-color: var(--medium-purple);
 }
 
+/*Specificity (0,1,0,0)*/
 #keys{
     display: grid;
     width: 35rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
+/*Specificity (0,1,0,0)*/
 #equals{
     grid-column: span 2;
 }
 
+/*Specificity (0,0,0,1)*/
 button{
-    background-color: #D2C2E1;
+    background-color: var(--medium-purple);
     border-radius: 8px;
 
 }
 
-.operator{
+/*Specificity (0,0,0,2)*/
+button:nth-of-type(4n+4){
     color: white;
-    background-color: #6F5C81;
+    background-color: var(--darkest-purple);
 }
 
+/*Specificity (0,0,1,0)*/
 .top-row{
     color: white;
-    background-color: #534B62;
+    background-color: var(--purple-black);
 }
 
+/*Specificity (0,0,1,1)*/
 button:hover{
     background-color: #1B1725;
-    color: #ece4ee;
+    color: var(--lightest-purple);
 }
+
+/*Specificity (0,0,1,1)*/
 button:active{
     transform: translateY(3px);
 }
