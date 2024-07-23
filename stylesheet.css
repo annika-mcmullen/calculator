@@ -36,7 +36,12 @@ body > .calc-frame{
     margin-bottom: 4vh;
     border: 2px solid var(--purple-black);
     background-color: var(--medium-purple);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
 }
+
 
 /*Specificity (0,0,1,0)*/
 .keys{
