@@ -10,25 +10,22 @@
 /*Specificity (0,0,0,1)*/
 body{
     margin: 0;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: repeating-linear-gradient(#1B1725, #534B62) fixed;
 }
 
-/*Specificity (0,1,0,0)*/
-#calc-frame{
+/*Specificity (0,0,1,1)*/
+body > .calc-frame{
     height: 75vh;
-    width: 25vw;
-    max-width: 300px;
-    min-width:200px;
+    width: 35vw;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 8px;
-    overflow: hidden;
     background-color: var(--lightest-purple);
     border: 3px solid var(--purple-black);
 }
@@ -41,8 +38,8 @@ body{
     background-color: var(--medium-purple);
 }
 
-/*Specificity (0,1,0,0)*/
-#keys{
+/*Specificity (0,0,1,0)*/
+.keys{
     display: grid;
     width: 35rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -60,7 +57,7 @@ button{
 
 }
 
-/*Specificity (0,0,0,2)*/
+/*Specificity (0,0,1,1)*/
 button:nth-of-type(4n+4){
     color: white;
     background-color: var(--darkest-purple);
