@@ -20,7 +20,10 @@ body{
 /*Specificity (0,0,1,1)*/
 body > .calc-frame{
     height: 75vh;
-    width: 35vw;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 30vw;
+    min-height: 200px;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +36,8 @@ body > .calc-frame{
 /*Specificity (0,0,1,0)*/
 .display{
     width: 100rem;
-    margin-bottom: 4vh;
+    height: auto;
+    margin-bottom: 2vh;
     border: 2px solid var(--purple-black);
     background-color: var(--medium-purple);
     display: flex;
@@ -42,6 +46,14 @@ body > .calc-frame{
     flex-direction: column;
 }
 
+.display > .last-number{
+    color:var(--darkest-purple);
+    font-size: 1rem;
+}
+.display > .current-number{
+    font-size: 1.75rem;
+    font-weight: bolder;
+}
 
 /*Specificity (0,0,1,0)*/
 .keys{
