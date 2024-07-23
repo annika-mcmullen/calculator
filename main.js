@@ -40,14 +40,14 @@ equalsButton.addEventListener("click", (e)=>{
     if(storedInput===""|| activeInput==="") return;
     calculate();
     updateDisplay();
+    clearResults();
+
 
 });
 
 //reset calculator
 allClearButton.addEventListener("click",(e) =>{
-    activeInput="";
-    activeOperator="";
-    storedInput="";
+    clearResults();
     updateDisplay();
 });
 
@@ -85,9 +85,7 @@ function calculate(){
         case"÷":
             if(zeroDividend(num1) === true){
                 //clear the screen
-                activeInput="";
-                activeOperator="";
-                storedInput="";
+                clearResults();
                 updateDisplay();
                 return;
             }
@@ -95,9 +93,6 @@ function calculate(){
                 total = num2 / num1;
                 break;
             }
-        case"x²":
-            squareActive(num1);
-            break;
         default:
             return;
     }
@@ -119,6 +114,10 @@ function chooseOperation(operation){
         calculate()
     }
     activeOperator = operation;
+    if(activeOperator ==="x²"){
+        squareActive(activeInput);
+        return;
+    }
     storedInput=activeInput;
     activeInput="";
     updateDisplay();
@@ -130,8 +129,17 @@ function zeroDividend(n){
         return true;
     }
 }
+//works around calcualate() wanting two operands and squaring only having one
 function squareActive(n){
     n=parseFloat(n);
     n**=2;
-    console.log(n);
+    activeInput = n.toLocaleString('fullwide',{maximumFractionDigits:13});
+    activeOperator= undefined;
+    storedInput="";
+    updateDisplay();
+}
+function clearResults(){
+    activeOperator="";
+    activeInput="";
+    storedInput="";
 }
